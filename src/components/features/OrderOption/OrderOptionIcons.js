@@ -5,8 +5,7 @@ import Icon from '../../common/Icon/Icon';
 import {formatPrice} from '../../../utils/formatPrice';
 
 const OrderOptionIcons = ({values, setOptionValue, currentValue, required}) => {
-  console.log('values: ', values, 'setOptionValue: ', setOptionValue, 'currentValue: ', currentValue, 'required: ', required);
-  
+
   return (
     <div className={styles.component}>
       {!required ? (

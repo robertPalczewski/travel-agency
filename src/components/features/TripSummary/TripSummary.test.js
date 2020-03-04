@@ -42,11 +42,11 @@ describe('Component TripSummary', () => {
       expect(component.find('.tag').at(expectedTags.indexOf(tag)).text()).toEqual(tag);
     }
   });
-/*
- it('shouldnt render tag div when tag is undefined or empty array', () => {
-    const component = shallow(<TripSummary /!*tags={[]}*!/ />);
+  
+  it('shouldnt render tag div when tag is undefined or empty array', () => {
+    const component = shallow(<TripSummary />);
     
     const renderedTags = component.find('.tags');
-    expect(renderedTags).toBeNull();
-  });*/
+    expect(renderedTags.exists()).toBeFalsy();
+  });
 });

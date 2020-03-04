@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import styles from './OrderOption.scss';
 
-const OrderOptionDate = ({setOrderOption, currentValue}) => (
+const OrderOptionDate = ({setOptionValue, currentValue}) => (
   <div>
-    <DatePicker className={styles.pointer} selected={currentValue} onChange={event => setOrderOption(event)}
+    <DatePicker className={styles.pointer} selected={currentValue} onChange={event => setOptionValue(event)}
     />
   </div>
 );
 
 OrderOptionDate.propTypes = {
   currentValue: PropTypes.string,
-  setOrderOption: PropTypes.func,
+  setOptionValue: PropTypes.func,
 };
 
 export default OrderOptionDate;

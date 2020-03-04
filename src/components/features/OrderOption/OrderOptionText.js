@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './OrderOption.scss';
 import PropTypes from 'prop-types';
 
-const OrderOptionText = ({currentValue, id, setOrderOption}) => (
+const OrderOptionText = ({currentValue, id, setOptionValue}) => (
   <div className={styles.number}>
     
     <input
@@ -10,14 +10,14 @@ const OrderOptionText = ({currentValue, id, setOrderOption}) => (
       className={styles.pointer}
       value={currentValue}
       placeholder={id == 'name' ? 'your name' : 'contact'}
-      onChange={event => setOrderOption(event.currentTarget.value)}
+      onChange={event => setOptionValue(event.currentTarget.value)}
     />
   </div>
 );
 
 OrderOptionText.propTypes = {
   currentValue: PropTypes.string,
-  setOrderOption: PropTypes.func,
+  setOptionValue: PropTypes.func,
   id: PropTypes.string,
 };
 

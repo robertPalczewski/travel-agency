@@ -165,13 +165,14 @@ for(let type in optionTypes){
         break;
       }
   
-/*      case 'text': {
+      case 'text': {
         it('should render input with type text', () => {
           const input = renderedSubcomponent.find('input');
           expect(input).toHaveLength(1);
         });
     
         it('should run setOrderOption function on change', () => {
+          console.log('renderedSubcomponent.props()', renderedSubcomponent.props());
           renderedSubcomponent
             .find('input')
             .at(0)
@@ -182,9 +183,9 @@ for(let type in optionTypes){
           });
         });
         break;
-      }*/
+      }
   
-/*      case 'date': {
+      case 'date': {
         it('contains div with date', () => {
           const date = renderedSubcomponent.find('div');
           expect(date.length).toBe(1);
@@ -197,7 +198,7 @@ for(let type in optionTypes){
           expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue});
         });
         break;
-      }*/
+      }
     }
   });
 }
