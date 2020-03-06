@@ -24,7 +24,7 @@ if (fs.existsSync(dbFileDist)){
     static: 'dist',
     // noCors: true,
   });
-  const port = process.env.PORT || 3131;
+  const port = process.env.PORT || 3132;
 
   server.use(middlewares);
   server.use(router);
