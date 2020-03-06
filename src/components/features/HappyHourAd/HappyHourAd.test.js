@@ -2,6 +2,11 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import HappyHourAd from './HappyHourAd';
 
+beforeAll(() => {
+  const utilsModule = jest.requireActual('../../../utils/formatTime.js');
+  utilsModule.formatTime = jest.fn(seconds => seconds);
+});
+
 const select = {
   title: '.title',
   promoDescription: '.promoDescription',
